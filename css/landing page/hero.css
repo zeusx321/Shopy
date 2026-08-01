@@ -1,0 +1,145 @@
+.hero-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1300px;
+    gap: 15px;
+    text-align: center;
+    position: relative;
+    
+}
+
+.abs-hero{
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.headphone{
+    left: 3%;
+    bottom: 14%;
+}
+
+.perfume{
+    right: 3%;
+    bottom: 14%;
+}
+
+.abs-hero img{
+    width: 640px;
+    max-width: 22vw;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.12));
+    transition: transform 0.3s ease;
+}
+
+.headphone img{
+    transform: rotate(-10deg);
+    animation: floatHeadphone 5s ease-in-out infinite;
+}
+
+.perfume img{
+    transform: rotate(10deg);
+    animation: floatPerfume 5s ease-in-out infinite 0.5s;
+}
+
+@keyframes floatHeadphone {
+    0%, 100% {
+        transform: translateY(0) rotate(-10deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(-7deg);
+    }
+}
+
+@keyframes floatPerfume {
+    0%, 100% {
+        transform: translateY(0) rotate(10deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(13deg);
+    }
+}
+
+.users-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 7px;
+}
+
+.users-hero img{
+    width: 100px;
+    height: auto;
+}
+
+.stars-hero-users{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.stars-hero-users img{
+    width: 100px;
+    height: auto;
+}
+
+.stars-hero-users h3{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.stars-hero-users h3 span{
+    color: #000000b4;
+    font-weight: normal;
+}
+
+.stars-hero-users h3{
+    font-size: 16px;
+}
+
+.hero-container h2{
+    font-size: 64px;
+    font-weight: 800;
+    width: 60%;
+}
+
+.hero-container h2 span{
+    color: #6366F1;
+}
+
+.hero-container p{
+    color: #000000b4;
+    max-width: 500px;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.hero-button-div{
+    margin-top: 10px;
+}
+
+.hero-button{
+    padding: 17px 28px;
+    font-size: 16px;
+}
+
+
