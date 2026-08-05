@@ -42,10 +42,6 @@
     padding: 5px 45px;
 }
 
-.categories::-webkit-scrollbar {
-    display: none;
-}
-
 .categories h3{
     font-size: 15px;
     font-weight: normal;
@@ -119,35 +115,20 @@
     flex-direction: column;
     gap: 10px;
     padding: 40px;
-    padding-top: 50px;
-    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.avaliable-product-div{
-    position: absolute;
-    background-color: #6365f11a;
-    padding: 8px 13px;
-    border-radius: 50px;
-    cursor: pointer;
-    top: 25px;
-}
-
-.green-stock{
-    background-color: #63f1871a;
-    border: 1px #68f163 solid;
+.featured-product-div:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .green-stock p{
-    color: #68f163;
-}
-
-.low-stock{
-    background-color: #f163631a;
-    border: 1px #f16363 solid;
+    color: #2cd626;
 }
 
 .low-stock p{
-    color: #f16363;
+    color: #d42828;
 }
 
 .avaliable-product-div p{
@@ -181,7 +162,6 @@
 
 .featured-product-div h3{
     font-size: 30px;
-    margin-top: 10px;
 }
 
 .brand-product-div p{
@@ -199,10 +179,38 @@
     font-size: 27px;
     font-weight: bold;
     margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter-div{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 18px;
 }
 
 .product-button{
     padding: 17px 20px;
     font-size: 15px;
     font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.minus-botton, .plus-botton{
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.minus-botton:hover, .plus-botton:hover{
+    background-color: #6366F1;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.minus-botton:active, .plus-botton:active{
+    transform: scale(0.95);
 }

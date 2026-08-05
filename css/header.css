@@ -20,6 +20,10 @@ header{
     max-width: 1300px;
 }
 
+.logo-header-div{
+    width: 150px;
+}
+
 .logo-header-div img{
     width: 80px;
 }
@@ -35,19 +39,26 @@ header div nav ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40%;
+    width: 360px;
 
 }
 
-header div nav ul li{
+header div nav ul a{
     font-size: 13px;
     margin: 0 10px;
     color: #000000b4;
+    transition: color 0.2s ease;
+}
+
+header div nav ul a:hover{
+    color: #6366F1;
 }
 
 .button-header{
     display: flex;
+    justify-content: end;
     gap: 5px;
+    width: 200px;
 }
 
 .white-button{
@@ -57,6 +68,17 @@ header div nav ul li{
     background-color: transparent;
     color: #000000b4;
     border-radius: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.white-button:hover{
+    background-color: #6365f11a;
+    color: #6366F1;
+    transform: translateY(-2px);
 }
 
 .black-button{
@@ -66,6 +88,22 @@ header div nav ul li{
     background-color: #000000;
     color: #f8f8f8ff;
     border-radius: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.black-button:hover{
+    background-color: #6366F1;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(99, 102, 241, 0.35);
+}
+
+.black-button:active, .white-button:active{
+    transform: translateY(0);
 }
 
 .c{
